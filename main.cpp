@@ -12,11 +12,6 @@ class HashEntry {
 	HashEntry* next;
 
 public:
-	HashEntry() {
-		this->key = 1;
-		this->value = "hah";
-		this->next = NULL;
-	}
 	HashEntry(const K& key, const V& value) {
 		this->key = key;
 		this->value = value;
