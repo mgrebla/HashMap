@@ -39,13 +39,15 @@ public:
 
 template<typename K, typename V>
 struct HashMapTable {
-
 	HashMapTable() {
 		table = new HashEntry<K, V> * [TABLE_SIZE];
 		for (unsigned int i = 0; i < TABLE_SIZE; ++i) {
 			table[i] = NULL;
 		}
 	}
+
+	//Destructor for cleanup hashtable required
+	~HashMapTable(){}
 
 	K hashFunction(const K key) {
 		return key % TABLE_SIZE;
